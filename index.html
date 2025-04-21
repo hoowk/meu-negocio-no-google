@@ -3,223 +3,578 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otimização Google Meu Negócio | Aumente Sua Visibilidade</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>GMN Pro - Otimização Google Meu Negócio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* CORES PRINCIPAIS (Azul do Google + Destaques) */
         :root {
-            --primary: #4285F4; /* Azul Google */
-            --secondary: #34A853; /* Verde Google */
-            --accent: #EA4335;   /* Vermelho Google */
-            --dark: #202124;     /* Preto Google */
+            --primary: #4285F4;
+            --secondary: #34A853;
+            --accent: #EA4335;
+            --dark: #202124;
             --light: #f8f9fa;
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
+        
         body {
-            background-color: var(--light);
             color: var(--dark);
             line-height: 1.6;
         }
-
-        /* HEADER */
+        
+        /* Header */
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
         }
-
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
         .logo {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            margin-bottom: 1rem;
+            color: var(--primary);
         }
-
+        
         .logo span {
             color: var(--accent);
         }
-
-        .tagline {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
         }
-
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 10rem 5% 5rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #555;
+        }
+        
         .cta-button {
             display: inline-block;
-            background-color: var(--accent);
+            background-color: var(--primary);
             color: white;
-            padding: 0.8rem 2rem;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            transition: transform 0.3s;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
         }
-
+        
         .cta-button:hover {
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
         }
-
-        /* SERVIÇOS */
-        .services {
-            padding: 4rem 2rem;
-            text-align: center;
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
+        
         .section-title {
+            text-align: center;
             font-size: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             color: var(--primary);
         }
-
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        /* Why Section */
+        .why {
+            background-color: var(--light);
+            padding: 5rem 5%;
+        }
+        
+        .why-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .why-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .why-text {
+            max-width: 500px;
+        }
+        
+        .why-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .why-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .why-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
-
+        
         .service-card {
             background: white;
             border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-
-        .service-card:hover {
-            transform: translateY(-10px);
+        
+        .service-image {
+            height: 200px;
+            overflow: hidden;
         }
-
-        .service-icon {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
         }
-
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
         .service-title {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 1rem;
             color: var(--dark);
         }
-
-        /* DEPOIMENTOS */
-        .testimonials {
-            background-color: var(--primary);
+        
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 4rem 2rem;
+            padding: 5rem 5%;
             text-align: center;
         }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 2rem;
-            margin: 1rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
-
-        /* FOOTER */
+        
+        .stat-item {
+            padding: 1.5rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-text {
+            font-size: 1.1rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 5rem 5%;
+            text-align: center;
+            background-color: var(--light);
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        /* Footer */
         footer {
             background-color: var(--dark);
             color: white;
-            text-align: center;
-            padding: 2rem;
+            padding: 3rem 5%;
         }
-
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
         .social-links a {
             color: white;
-            margin: 0 10px;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
         }
-
+        
+        .social-links a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
         @media (max-width: 768px) {
-            .services-grid {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding-top: 8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .why-content {
                 grid-template-columns: 1fr;
+            }
+            
+            .why-text {
+                order: 2;
+            }
+            
+            .why-image {
+                order: 1;
             }
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
+    <!-- Header -->
     <header>
-        <div class="container">
-            <h1 class="logo">GMN<span>PRO</span></h1>
-            <p class="tagline">Sua empresa no topo do Google em 7 dias!</p>
-            <a href="#contact" class="cta-button">QUERO OTIMIZAR MEU NEGÓCIO</a>
-        </div>
+        <nav class="navbar">
+            <div class="logo">GMN<span>Pro</span></div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#clientes">Clientes</a>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#blog">Blog</a>
+                <a href="#contato">Fale Conosco</a>
+            </div>
+        </nav>
     </header>
 
-    <!-- SERVIÇOS -->
-    <section class="services">
-        <h2 class="section-title">NOSSOS SERVIÇOS</h2>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Aumente sua visibilidade na internet usando o Google Meu Negócio 🚀</h1>
+        <p>O Google é muito importante para negócios na internet. Com a nossa ajuda, sua empresa vai se destacar, atraindo mais clientes e fortalecendo sua marca.</p>
+        <a href="#contato" class="cta-button">QUERO OTIMIZAR MEU NEGÓCIO</a>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2 class="section-title">Veja por que fazer a OTIMIZAÇÃO e o GERENCIAMENTO do seu perfil no Google</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3 class="benefit-title">Presença mais forte</h3>
+                <p>Seja encontrado facilmente por novos clientes e faça sua marca ser conhecida no Google.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="benefit-title">Mais clientes</h3>
+                <p>Transforme visitantes em clientes fiéis com um perfil no Google que chama a atenção.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3 class="benefit-title">Melhor interação</h3>
+                <p>Fale com seus clientes de maneira eficaz, respondendo a comentários e mantendo seu perfil atualizado.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="benefit-title">Reputação sólida</h3>
+                <p>Crie e mantenha uma boa imagem online que faça sua empresa se destacar dos concorrentes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="why" id="sobre">
+        <div class="why-container">
+            <h2 class="section-title">Quais os benefícios do Google Meu Negócio</h2>
+            <div class="why-content">
+                <div class="why-text">
+                    <h3>Facilita encontrar sua empresa</h3>
+                    <p>Ter um perfil no Google Meu Negócio ajuda a gerenciar como sua empresa aparece no Google Maps, tornando mais fácil para os clientes encontrarem você. Ter o Perfil Otimizado e Gerenciado com estratégia deixa a concorrência a anos-luz de distância.</p>
+                    
+                    <h3>Otimização rápida no Google</h3>
+                    <p>Integrar o Google Meu Negócio com o Google Maps permite criar um perfil completo no Google, mostrando sua localização e informações importantes para atrair clientes. Quanto mais completo e preciso, mas chances de converter usuários e buscadores em clientes.</p>
+                    
+                    <h3>Receba e responda avaliações</h3>
+                    <p>Interagir com avaliações de clientes no Google Meu Negócio constrói confiança e destaca sua empresa nas buscas do Google, atraindo clientes interessados no que você oferece. A correta construção e condução das respostas fará toda a diferença, e é mais um fator que podemos lhe ajudar.</p>
+                </div>
+                <div class="why-image">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Google Meu Negócio">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+        <h2 class="section-title">Por que escolher nosso serviço?</h2>
+        <p class="section-subtitle">Não basta só estar no Google; você precisa se sobressair. Nossa equipe cuida de tudo no seu perfil, de fotos a respostas para comentários.</p>
+        
         <div class="services-grid">
-            <!-- Serviço 1 -->
             <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-search-location"></i>
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Destaque-se">
                 </div>
-                <h3 class="service-title">Otimização de Google Meu Negócio</h3>
-                <p>Perfil completo, fotos profissionais, descrição SEO e horários atualizados.</p>
+                <div class="service-content">
+                    <h3 class="service-title">Destaque-se</h3>
+                    <p>Focamos em tudo, dos aspectos mais importantes aos menores detalhes, para melhorar e cuidar de cada parte do seu perfil com atenção e profissionalismo.</p>
+                </div>
             </div>
-
-            <!-- Serviço 2 -->
+            
             <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-qrcode"></i>
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Perfil Completo">
                 </div>
-                <h3 class="service-title">Plaquinhas com QR Code</h3>
-                <p>Clientes escaneiam e avaliam seu negócio direto no Google.</p>
+                <div class="service-content">
+                    <h3 class="service-title">Perfil Completo e eficaz</h3>
+                    <p>Usar bem todos os recursos do Google Meu Negócio é essencial para se destacar da concorrência. Sabemos como aproveitar ao máximo essas ferramentas e manter seu perfil sempre atualizado.</p>
+                </div>
             </div>
-
-            <!-- Serviço 3 -->
+            
             <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-globe"></i>
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Converse com clientes">
                 </div>
-                <h3 class="service-title">Criação de Sites Rápidos</h3>
-                <p>Sites responsivos em 24h com domínio e e-mail profissional.</p>
+                <div class="service-content">
+                    <h3 class="service-title">Converse com seus clientes</h3>
+                    <p>Seu perfil é uma chance de mostrar aos clientes a sua identidade. Eles vão notar como você atualiza seu perfil e responde a comentários e avaliações.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- DEPOIMENTOS -->
-    <section class="testimonials">
-        <h2 class="section-title">O QUE NOSSOS CLIENTES DIZEM</h2>
-        <div class="testimonial-card">
-            <p>"Minha padaria apareceu no topo do Google em 1 semana! Valeu cada centavo."</p>
-            <p><strong>— João, Padaria Estrela</strong></p>
-        </div>
-        <div class="testimonial-card">
-            <p>"As plaquinhas de QR Code trouxeram +50 avaliações em um mês."</p>
-            <p><strong>— Maria, Salão Bella Hair</strong></p>
+    <!-- Stats Section -->
+    <section class="stats">
+        <h2 class="section-title">Experiência e milhares de negócios atendidos em todo o Brasil</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">40%</div>
+                <div class="stat-text">Perfis com fotos têm mais chances de receber pedidos</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">70%</div>
+                <div class="stat-text">Aumento em cliques para negócios no top 3</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5x</div>
+                <div class="stat-text">Mais visibilidade com perfil otimizado</div>
+            </div>
         </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contact" class="services">
-        <h2 class="section-title">VAMOS CONVERSAR?</h2>
-        <p>Mande uma mensagem agora mesmo:</p>
+    <!-- CTA Section -->
+    <section class="cta" id="contato">
+        <h2>Pronto para transformar sua presença digital?</h2>
+        <p>Entre em contato agora mesmo e descubra como podemos ajudar seu negócio a se destacar no Google.</p>
         <a href="https://wa.me/SEUNUMERO" class="cta-button">
-            <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
+            <i class="fab fa-whatsapp"></i> FALE CONOSCO
         </a>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">GMN<span>Pro</span></div>
+                <p>Especialistas em otimização de Google Meu Negócio, ajudando empresas a se destacarem online.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Serviços</h3>
+                <ul>
+                    <li><a href="#">Otimização GMB</a></li>
+                    <li><a href="#">Plaquinhas QR Code</a></li>
+                    <li><a href="#">Criação de Sites</a></li>
+                    <li><a href="#">Gerenciamento de Avaliações</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <p><i class="fas fa-envelope"></i> contato@gmnpro.com</p>
+                <p><i class="fas fa-phone"></i> (XX) XXXX-XXXX</p>
+                <p><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</p>
+            </div>
         </div>
-        <p>&copy; 2024 GMNPRO - Todos os direitos reservados.</p>
+        
+        <div class="copyright">
+            <p>&copy; 2023 GMNPro. Todos os direitos reservados.</p>
+            <p>Feito com <i class="fas fa-heart" style="color: var(--accent);"></i> por sua equipe</p>
+        </div>
     </footer>
 </body>
 </html>
