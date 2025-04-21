@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Meu Negócio - Potencialize Seu Negócio Local</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Impulsione Seu Negócio com o Google</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     * {
       margin: 0;
@@ -15,135 +14,147 @@
     }
 
     body {
-      background-color: #f8f9fa;
+      background-color: #f0f2f5;
       color: #333;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #4285f4;
-      color: white;
-      padding: 1rem;
+      background-image: url('https://images.unsplash.com/photo-1581091012184-7fba250f7f36?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
       text-align: center;
+      color: white;
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     }
 
-    section.hero {
-      background-color: #e8f0fe;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-
-    .hero h2 {
-      font-size: 2rem;
-      color: #1a73e8;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
+    header p {
       font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
 
-    section.services, section.qrcode {
-      padding: 2rem 1rem;
-      max-width: 900px;
+    .container {
+      max-width: 1200px;
       margin: auto;
-    }
-
-    .services h3, .qrcode h3 {
-      font-size: 1.5rem;
-      color: #1a73e8;
-      margin-bottom: 1rem;
+      padding: 40px 20px;
       text-align: center;
     }
 
-    .cards {
+    h2 {
+      color: #0056d6;
+      margin-bottom: 30px;
+    }
+
+    .services {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
     }
 
     .card {
       background: white;
-      padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      width: 250px;
-      text-align: center;
+      padding: 25px;
+      width: 300px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .card img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 0.5rem;
+      height: 80px;
+      margin-bottom: 15px;
     }
 
-    .card h4 {
-      margin-bottom: 0.5rem;
-      color: #1a73e8;
+    .qr-section {
+      background-color: #fff;
+      margin-top: 60px;
+      padding: 40px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .qr-section img {
+      margin-top: 20px;
+      height: 120px;
     }
 
     footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #0056d6;
+      color: white;
       text-align: center;
-      padding: 2rem 1rem;
-      background-color: #e8f0fe;
-      color: #555;
     }
 
-    .qrcode img {
-      width: 100px;
-      margin: 1rem auto;
-      display: block;
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      text-decoration: none;
     }
+
+    .whatsapp-btn:hover {
+      background-color: #20b65c;
+    }
+
   </style>
 </head>
-
 <body>
+
   <header>
     <h1>Impulsione Seu Negócio com o Google</h1>
+    <p>Apareça no Google e conquiste mais clientes para seu comércio local.</p>
   </header>
 
-  <section class="hero">
-    <h2>Apareça no Google e Atraia Mais Clientes</h2>
-    <p>Oferecemos serviços profissionais para colocar seu negócio no Google Maps, otimizar seu perfil e atrair mais clientes para seu comércio local.</p>
-  </section>
-
-  <section class="services">
-    <h3>Serviços que Oferecemos</h3>
-    <div class="cards">
+  <div class="container">
+    <h2>Serviços que Oferecemos</h2>
+    <div class="services">
       <div class="card">
-        <img src="https://img.icons8.com/fluency/48/000000/google-maps.png" alt="Google Maps">
-        <h4>Cadastro no Google</h4>
-        <p>Colocamos seu negócio no Google e no Google Maps da forma correta.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Cadastro no Google">
+        <h3>Cadastro no Google</h3>
+        <p>Colocamos seu negócio no Google Maps e no Google de forma profissional e eficaz.</p>
       </div>
       <div class="card">
-        <img src="https://img.icons8.com/fluency/48/000000/seo.png" alt="Otimização">
-        <h4>Otimização do Perfil</h4>
-        <p>Melhoramos seu perfil com palavras-chave, fotos e informações completas.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/478/478543.png" alt="Otimização do Perfil">
+        <h3>Otimização do Perfil</h3>
+        <p>Melhoramos seu perfil com fotos, palavras-chave e informações completas.</p>
       </div>
       <div class="card">
-        <img src="https://img.icons8.com/fluency/48/000000/star.png" alt="Avaliações">
-        <h4>Gestão de Avaliações</h4>
-        <p>Te ajudamos a ganhar mais avaliações positivas e destacar sua reputação.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Gestão de Avaliações">
+        <h3>Gestão de Avaliações</h3>
+        <p>Te ajudamos a conquistar mais avaliações positivas e fortalecer sua reputação.</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="qrcode">
-    <h3>Placas com QR Code para Avaliações</h3>
-    <p>Vendemos placas físicas com QR Code personalizado para que seus clientes avaliem seu negócio de forma fácil e rápida.</p>
-    <img src="https://img.icons8.com/ios-filled/100/000000/qr-code.png" alt="QR Code">
-    <p>Ideal para deixar no balcão ou entregar junto com o pedido.</p>
-  </section>
+  <div class="container qr-section">
+    <h2>Placas com QR Code para Avaliações</h2>
+    <p>Oferecemos placas físicas com QR Code para que seus clientes avaliem seu negócio com facilidade. Ideal para deixar no balcão ou entregar com o pedido.</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="QR Code">
+  </div>
 
   <footer>
-    <p>© 2025 Seu Negócio no Google. Todos os direitos reservados.</p>
+    © 2025 Seu Negócio no Google. Todos os direitos reservados.
   </footer>
-</body>
 
+  <a class="whatsapp-btn" href="https://wa.me/5599999999999" target="_blank" title="Fale Conosco no WhatsApp">💬</a>
+
+</body>
 </html>
